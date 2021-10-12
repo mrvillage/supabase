@@ -8,6 +8,9 @@ services:
       - ${KONG_HTTPS_PORT}:8443/tcp
     volumes:
       - ./volumes/kong.yml:/var/lib/kong/kong.yml
+      - ./volumes/kong.conf:/etc/kong/kong.conf
+      - ./volumes/fullchain.pem:/etc/kong/fullchain.pem
+      - ./volumes/privkey.pem:/etc/kong/privkey.pem
     environment:
       KONG_DATABASE: "off"
       KONG_DECLARATIVE_CONFIG: /var/lib/kong/kong.yml
@@ -50,6 +53,11 @@ services:
 
       GOTRUE_EXTERNAL_PHONE_ENABLED: ${ENABLE_PHONE_SIGNUP}
       GOTRUE_SMS_AUTOCONFIRM: ${ENABLE_PHONE_AUTOCONFIRM}
+
+      GOTRUE_EXTERNAL_DISCORD_ENABLED: ${EXTERNAL_DISCORD_ENABLED}
+      GOTRUE_EXTERNAL_DISCORD_CLIENT_ID: ${EXTERNAL_DISCORD_CLIENT_ID}
+      GOTRUE_EXTERNAL_DISCORD_SECRET: ${EXTERNAL_DISCORD_SECRET}
+      GOTRUE_EXTERNAL_DISCORD_REDIRECT_URI: ${EXTERNAL_DISCORD_REDIRECT_URI}
   rest:
     container_name: supabase-rest
     image: postgrest/postgrest:v8.0.0
