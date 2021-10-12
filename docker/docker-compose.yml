@@ -19,7 +19,7 @@ services:
       KONG_PLUGINS: request-transformer,cors,key-auth
   auth:
     container_name: supabase-auth
-    image: supabase/gotrue:v2.1.8
+    image: mrvillage/gotrue:latest
     depends_on:
       - db
     restart: unless-stopped
