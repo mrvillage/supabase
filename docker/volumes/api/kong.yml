@@ -7,7 +7,7 @@ consumers:
   - username: anon
     keyauth_credentials:
       - key: ANON_KEY
-- username: service_role
+  - username: service_role
     keyauth_credentials:
       - key: SERVICE_KEY
 
