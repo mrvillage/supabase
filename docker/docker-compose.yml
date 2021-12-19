@@ -162,5 +162,6 @@ services:
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
+      - ./volumes/db/data/postgresql.conf:/etc/postgresql/postgresql.conf
       - ./volumes/db/data:/var/lib/postgresql/data
       - ./volumes/db/init:/docker-entrypoint-initdb.d
