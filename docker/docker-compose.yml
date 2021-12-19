@@ -27,10 +27,9 @@ services:
       - ${KONG_HTTP_PORT}:8000/tcp
       - ${KONG_HTTPS_PORT}:8443/tcp
     volumes:
-      - ./volumes/kong.yml:/var/lib/kong/kong.yml
-      - ./volumes/kong.conf:/etc/kong/kong.conf
       - ./volumes/fullchain.pem:/etc/kong/fullchain.pem
       - ./volumes/privkey.pem:/etc/kong/privkey.pem
+      - ./volumes/api/kong.conf:/etc/kong/kong.conf
       - ./volumes/api/kong.yml:/var/lib/kong/kong.yml
     environment:
       KONG_DATABASE: "off"
