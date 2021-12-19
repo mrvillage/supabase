@@ -6,8 +6,7 @@
 
 # Supabase
 
-[Supabase](https://supabase.io) adalah sumber terbuka alternatif kepada Firebase. Kami sedang membina ciri-ciri Firebase menggunakan alat sumber terbuka kelas perusahaan.
-
+[Supabase](https://supabase.com) adalah sumber terbuka alternatif kepada Firebase. Kami sedang membina ciri-ciri Firebase menggunakan alat sumber terbuka kelas perusahaan.
 
 - [x] Hosting Pangkalan Data untuk Postgres
 - [x] Langganan Waktu Nyata (Realtime)
@@ -19,13 +18,13 @@
 
 ## Dokumentasi
 
-Untuk dokumentasi lengkap, layari [supabase.io/docs](https://supabase.io/docs)
+Untuk dokumentasi lengkap, layari [supabase.io/docs](https://supabase.com/docs)
 
 ## Komuniti & Sokongan
 
 - [Forum Komuniti](https://github.com/supabase/supabase/discussions). Terbaik untuk: membantu pembinaan and perbincangan mengenai cara terbaik pangkalan data.
 - [Isu GitHub](https://github.com/supabase/supabase/issues). Terbaik untuk: pepijat dan ralat yang anda hadapi menggunakan Supabase.
-- [Sokongan E-mel](https://supabase.io/docs/support#business-support). Terbaik untuk: masalah dengan pangkalan data atau infrastruktur.
+- [Sokongan E-mel](https://supabase.com/docs/support#business-support). Terbaik untuk: masalah dengan pangkalan data atau infrastruktur.
 
 ## Status
 
@@ -47,9 +46,9 @@ Supabase adalah gabungan alat sumber terbuka. Kami membina ciri Firebase menggun
 **Seni bina semasa**
 
 Supabase ialah [platform yang dihoskan](https://app.supabase.io). Anda boleh mendaftar dan mula menggunakan Supabase tanpa memasang apa-apa.
-Anda juga boleh [host sendiri](https://supabase.io/docs/guides/self-hosting) dan [lokal](https://supabase.io/docs/guides/local-development).
+Anda juga boleh [host sendiri](https://supabase.com/docs/guides/self-hosting) dan [lokal](https://supabase.com/docs/guides/local-development).
 
-![Seni bina](https://supabase.io/assets/images/supabase-architecture-9050a7317e9ec7efb7807f5194122e48.png)
+![Seni bina](https://supabase.com/assets/images/supabase-architecture-9050a7317e9ec7efb7807f5194122e48.png)
 
 - [PostgreSQL](https://www.postgresql.org/) adalah sistem pangkalan data objek-relasional dengan pengembangan aktif lebih dari 30 tahun yang menjadikannya reputasi yang kuat untuk kebolehpercayaan, ketahanan ciri, dan prestasi.
 - [Realtime](https://github.com/supabase/realtime) adalah pelayan Elixir yang membolehkan anda mendengar sisipan, kemas kini dan pemadaman PostgreSQL menggunakan soket web. Supabase mendengar fungsi replikasi terbina dalam Postgres, menukar aliran bait(byte) replikasi menjadi JSON, kemudian menyiarkan JSON melalui soket web.
@@ -68,7 +67,7 @@ Librari klien kami adalah modular. Setiap sub-librari adalah pelaksanaan standal
   - `realtime-{lang}`: Librari klien untuk bekerjasama [Realtime](https://github.com/supabase/realtime)
   - `gotrue-{lang}`: Librari klien untuk bekerjasama [GoTrue](https://github.com/netlify/gotrue)
 
-| Repo                  | Rasmi                                            | Komuniti                                                                                                                                                                                                                                                                                                                              |
+| Repo                  | Rasmi                                            | Komuniti                                                                                                                                                                                                                                                                                                                             |
 | --------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **`supabase-{lang}`** | [`JS`](https://github.com/supabase/supabase-js)  | [`C#`](https://github.com/supabase/supabase-csharp) \| [`Dart`](https://github.com/supabase/supabase-dart) \| [`Python`](https://github.com/supabase/supabase-py) \| `Rust` \| [`Ruby`](https://github.com/supabase/supabase-rb) \| `Go`                                                                                             |
 | `postgrest-{lang}`    | [`JS`](https://github.com/supabase/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) \| [`Ruby`](https://github.com/supabase/postgrest-rb) \| [`Go`](https://github.com/supabase/postgrest-go) |
@@ -82,4 +81,3 @@ Librari klien kami adalah modular. Setiap sub-librari adalah pelaksanaan standal
 ## Penaja
 
 [![Menjadi penaja](https://user-images.githubusercontent.com/10214025/90518111-e74bbb00-e198-11ea-8f88-c9e3c1aa4b5b.png)](https://github.com/sponsors/supabase)
-

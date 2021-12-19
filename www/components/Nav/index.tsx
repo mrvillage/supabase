@@ -10,7 +10,7 @@ import SolutionsData from 'data/Solutions.json'
 
 import Solutions from '~/components/Nav/Product'
 import Developers from '~/components/Nav/Developers'
-import Annoucement from '~/components/Nav/Annoucement'
+import Announcement from '~/components/Nav/Announcement'
 
 type Props = {
   darkMode: boolean
@@ -185,7 +185,7 @@ const Nav = (props: Props) => {
 
   return (
     <>
-      <Annoucement />
+      <Announcement />
       <div className="sticky top-0 z-50">
         <nav className="bg-white dark:bg-gray-800 border-b dark:border-gray-600">
           {/* <div className="lg:container mx-auto relative flex justify-between h-16 lg:px-10 xl:px-0"> */}
@@ -247,7 +247,7 @@ const Nav = (props: Props) => {
                     Star us on GitHub
                   </Button>
                 </a>
-                <a href="https://app.supabase.io/api/login">
+                <a href="https://api.supabase.io/platform/login">
                   <Button>Start your project</Button>
                 </a>
               </div>
@@ -297,7 +297,7 @@ const Nav = (props: Props) => {
               <div className="mt-6 mb-12">
                 <div className="pt-2 pb-4 space-y-1">
                   <a
-                    href="https://app.supabase.io/api/login"
+                    href="https://api.supabase.io/platform/login"
                     className="block pl-3 pr-4 text-base font-medium text-gray-600 dark:text-white"
                   >
                     Sign in

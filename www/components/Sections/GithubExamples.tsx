@@ -43,20 +43,14 @@ function GithubExamples() {
             </p>
           </Typography.Text>
           <div className="flex space-y-1.5 flex-col lg:space-y-0 lg:space-x-1.5 lg:flex-row justify-center">
-            <Link
-              href="https://supabase.io/docs/guides/examples#guides"
-              as="https://supabase.io/docs/guides/examples#guides"
-            >
+            <Link href="/docs/guides/examples#guides" as="/docs/guides/examples#guides">
               <a>
                 <Button type="default" icon={<IconBookOpen />}>
                   View guides
                 </Button>
               </a>
             </Link>
-            <Link
-              href="https://supabase.io/docs/guides/examples"
-              as="https://supabase.io/docs/guides/examples"
-            >
+            <Link href="/docs/guides/examples" as="/docs/guides/examples">
               <a>
                 <Button type="default">View all examples</Button>
               </a>
@@ -122,12 +116,12 @@ function GithubExamples() {
               )
             })}
             <div className="container mx-auto hidden md:flex flex-row justify-between mt-3">
-              <div ref={prevRef} className="cursor-pointer">
+              <div ref={prevRef} className="cursor-pointer ml-4">
                 <Typography.Text>
                   <IconArrowLeft />
                 </Typography.Text>
               </div>
-              <div ref={nextRef} className="cursor-pointer">
+              <div ref={nextRef} className="cursor-pointer mr-4">
                 <Typography.Text>
                   <IconArrowRight />
                 </Typography.Text>

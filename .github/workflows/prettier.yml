@@ -1,28 +1,36 @@
 name: Check Code with Prettier
 
 on:
-  push:
+  pull_request:
     branches:
-      - "master"
+      - 'master'
 
 jobs:
-
   format:
-  
     runs-on: ubuntu-latest
     steps:
-    - name: Check out repo
-      uses: actions/checkout@v2
-    - name: Run prettier
-      run: |-
-        npx prettier --write 'examples/**/*.{js,jsx,ts,tsx,css,md,json}' 
-        npx prettier --write 'i18n/**/*.{js,jsx,ts,tsx,css,md,json}'
-        npx prettier --write 'www/**/*.{js,jsx,ts,tsx,css,md,json}'
-        
-    - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v2.3.0
-      with:
-        commit_message: Apply Prettier changes
-        branch: master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Run prettier
+        run: |-
+          function run_check() {
+            if $(grep -q '"prettier"' "$1") ; then
+              pushd "$(dirname $1)"
+              echo "Running prettier on $(pwd)"
+              npx prettier -c '**/*.{js,jsx,ts,tsx,css,md,json}'
+              popd
+            fi
+          }
+          find . -type f -name 'package.json' ! -path '*node_modules*' -print0 | while IFS= read -r -d '' file; do
+            run_check "$file"
+          done
+
+  # i18n is not a node package, so we handle that one separately
+  format-i18n:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Run prettier
+        run: |-
+          npx prettier -c 'i18n/**/*.{js,jsx,ts,tsx,css,md,json}'

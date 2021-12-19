@@ -7,11 +7,12 @@
 module.exports = {
   title: 'Supabase',
   tagline: 'The open source Firebase alternative.',
-  url: 'https://supabase.io',
-  baseUrl: '/',
+  url: 'https://supabase.com',
+  baseUrl: '/docs/',
   favicon: '/favicon.ico',
   organizationName: 'supabase', // Usually your GitHub org/user name.
-  projectName: 'supabase', // Usually your repo name.
+  projectName: 'Supabase Docs', // Usually your repo name.
+  onBrokenLinks: 'ignore',
   themeConfig: {
     colorMode: {
       // "light" | "dark"
@@ -56,8 +57,9 @@ module.exports = {
       items: [
         {
           label: 'Overview',
-          to: '/docs',
-          activeBaseRegex: '(^/docs$)|(/docs/faq)|(^/docs/guides/examples)',
+          to: '/',
+          activeBaseRegex:
+            '.*.docs/$|^/docs/architecture|(^/docs/guides/(database|auth|storage|api|examples!))|(^/docs/guides/(examples|with-angular|with-flutter|with-nextjs|with-react|with-redwoodjs|with-svelte|with-vue-3)|^/docs/faq|^/docs/going-into-prod|^/docs/handbook|^/docs/company)',
           position: 'left',
         },
         {
@@ -100,7 +102,7 @@ module.exports = {
           items: [
             {
               label: 'Blog',
-              to: 'https://supabase.io/blog',
+              to: 'https://supabase.com/blog',
             },
             {
               label: 'Open source',
@@ -108,11 +110,11 @@ module.exports = {
             },
             {
               label: 'Humans.txt',
-              to: 'https://supabase.io/humans.txt',
+              to: 'https://supabase.com/humans.txt',
             },
             {
               label: 'Lawyers.txt',
-              to: 'https://supabase.io/lawyers.txt',
+              to: 'https://supabase.com/lawyers.txt',
             },
           ],
         },
@@ -121,23 +123,23 @@ module.exports = {
           items: [
             {
               label: 'Brand Assets',
-              to: 'https://supabase.io/brand-assets',
+              to: 'https://supabase.com/brand-assets',
             },
             {
               label: 'Docs',
-              to: '/docs',
+              to: '/',
             },
             {
               label: 'Pricing',
-              to: 'https://supabase.io/pricing',
+              to: 'https://supabase.com/pricing',
             },
             {
               label: 'Support',
-              to: '/docs/support',
+              to: '/support',
             },
             {
               label: 'System Status',
-              to: 'https://status.supabase.io/',
+              to: 'https://status.supabase.com/',
             },
           ],
         },
@@ -158,12 +160,12 @@ module.exports = {
             },
             {
               label: 'RSS',
-              href: 'https://supabase.io/rss.xml',
+              href: 'https://supabase.com/rss.xml',
             },
-            // {
-            //   label: "Discord",
-            //   href: "https://discordapp.com/invite/docusaurus"
-            // }
+            {
+              label: 'Discord',
+              href: 'https://discord.supabase.com',
+            },
           ],
         },
         {
@@ -184,7 +186,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          // sidebarCollapsible: true,
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/supabase/supabase/edit/master/web',
         },

@@ -63,11 +63,11 @@ values={[
 ```sh
 1. Go to the "SQL" section.
 2. Click "User Management Starter".
-4. Click "Run".
+3. Click "Run".
 ```
 
 <video width="99%" muted playsInline controls="true">
-    <source src="/videos/sql-user-management-starter.mp4" type="video/mp4" muted playsInline />
+    <source src="/docs/videos/sql-user-management-starter.mp4" type="video/mp4" muted playsInline />
 </video>
 
 </TabItem>
@@ -145,7 +145,7 @@ values={[
 ```
 
 <video width="99%" muted playsInline controls="true">
-    <source src="/videos/api/api-url-and-key.mp4" type="video/mp4" muted playsInline />
+    <source src="/docs/videos/api/api-url-and-key.mp4" type="video/mp4" muted playsInline />
 </video>
 
 </TabItem>
@@ -155,7 +155,7 @@ values={[
 
 Let's start building the Angular app from scratch.
 
-### Initialize a Angular app
+### Initialize an Angular app
 
 We can use the [Angular CLI](https://angular.io/cli) to initialize
 an app called `supabase-angular`:
@@ -180,7 +180,7 @@ These variables will be exposed on the browser, and that's completely fine since
 export const environment = {
   production: false,
   supabaseUrl: "YOUR_SUPABASE_URL",
-  supbaseKey: "YOUR_SUPABASE_KEY"
+  supabaseKey: "YOUR_SUPABASE_KEY"
 };
 ```
 
@@ -204,7 +204,7 @@ export class SupabaseService {
   private supabase: SupabaseClient;
 
   constructor() {
-    this.supabase = createClient(environment.supabaseUrl, environment.supbaseKey);
+    this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
   }
 
   get user() {
@@ -265,7 +265,7 @@ You can find the full contents of this file [here](https://raw.githubusercontent
 
 ### Set up a Login component
 
-Let's set up a Angular component to manage logins and sign ups. We'll use Magic Links, so users can sign in with their email without using passwords.
+Let's set up an Angular component to manage logins and sign ups. We'll use Magic Links, so users can sign in with their email without using passwords.
 Create an **AuthComponent** with `ng g c auth` Angular CLI command.
 
 ```ts title="src/app/auth.component.ts"
