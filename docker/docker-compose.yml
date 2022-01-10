@@ -37,7 +37,7 @@ services:
 
   auth:
     container_name: supabase-auth
-    image: supabase/gotrue:v2.2.12
+    image: mrvillage/gotrue:latest
     depends_on:
       - db
     restart: unless-stopped
@@ -71,6 +71,11 @@ services:
 
       GOTRUE_EXTERNAL_PHONE_ENABLED: ${ENABLE_PHONE_SIGNUP}
       GOTRUE_SMS_AUTOCONFIRM: ${ENABLE_PHONE_AUTOCONFIRM}
+
+      GOTRUE_EXTERNAL_DISCORD_ENABLED: ${EXTERNAL_DISCORD_ENABLED}
+      GOTRUE_EXTERNAL_DISCORD_CLIENT_ID: ${EXTERNAL_DISCORD_CLIENT_ID}
+      GOTRUE_EXTERNAL_DISCORD_SECRET: ${EXTERNAL_DISCORD_SECRET}
+      GOTRUE_EXTERNAL_DISCORD_REDIRECT_URI: ${EXTERNAL_DISCORD_REDIRECT_URI}
 
   rest:
     container_name: supabase-rest
