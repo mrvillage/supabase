@@ -27,10 +27,7 @@ const Hero = () => {
                       <p className="mt-3 text-base">Serverless functions coming soon</p>
                     </Typography.Text>
                     <Space>
-                      <Link
-                        href="https://api.supabase.io/platform/login"
-                        as="https://api.supabase.io/platform/login"
-                      >
+                      <Link href="https://app.supabase.io" as="https://app.supabase.io">
                         <a className="mt-10">
                           <Button className="py-3" size="medium">
                             Start your project
@@ -54,17 +51,17 @@ const Hero = () => {
                     <div className="mt-5 w-full sm:max-w-lg lg:ml-0">
                       <div className="flex flex-wrap items-center justify-start">
                         <img
-                          className="h-8 sm:h-10 pr-10 mb-5"
+                          className="h-8 sm:h-10 pr-5 md:pr-10 mb-5"
                           src={`${basePath}/images/logos/yc--grey.png`}
                           alt="Y Combinator"
                         />
                         <img
-                          className="relative h-5 sm:h-7 pr-10 mb-5"
+                          className="relative h-5 sm:h-7 pr-5 md:pr-10 mb-5"
                           src={`${basePath}/images/logos/mozilla--grey.png`}
                           alt="Mozilla"
                         />
                         <img
-                          className="relative h-5 sm:h-7 pr-10 mb-5"
+                          className="relative h-5 sm:h-7 pr-5 md:pr-10 mb-5"
                           src={`${basePath}/images/logos/coatue.png`}
                           alt="Coatue"
                         />
